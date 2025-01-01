@@ -10,4 +10,9 @@ path = "src/main.rs"
 [lib]
 
 [dependencies]
+anyhow = "1.0.95"
+assert_cmd = "2.0.16"
 clap = { version = "4.5.23", features = ["derive"] }
+predicates = "3.1.3"
+pretty_assertions = "1.4.1"
+rand = "0.8.5"
