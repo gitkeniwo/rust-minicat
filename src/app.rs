@@ -10,7 +10,7 @@ use crate::MyResult;
 #[command(name = "minicat")]
 #[command(author = "gitkeniwo")]
 #[command(version = "0.1")]
-#[command(about = "A lesser cat utility written in rust. Concatenate and print files", long_about = None)]
+#[command(about = "A lesser cat utility written in rust. Concatenate and print files.", long_about = None)]
 pub struct Opts {
     /// Number the output lines, starting at 1.
     #[arg(default_value = "-")]

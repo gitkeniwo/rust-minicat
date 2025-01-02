@@ -1,7 +1,7 @@
 # rust-minicat
 
 ```bash
-A lesser cat utility written in rust. Concatenate and print files
+A lesser cat utility written in rust. Concatenate and print files.
 
 Usage: minicat [OPTIONS] [FILES]...
 
