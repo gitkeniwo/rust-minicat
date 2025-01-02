@@ -1,5 +1,7 @@
+use rust_minicat::run;
+
 fn main() {
-    if let Err(e) = rust_minicat::run() {
+    if let Err(e) = run() {
         eprintln!("{}", e); 
         std::process::exit(1); 
     }
