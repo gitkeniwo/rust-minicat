@@ -1,4 +1,4 @@
-name: Rust
+name: Integration Tests
 
 on:
   push:
@@ -10,13 +10,47 @@ env:
   CARGO_TERM_COLOR: always
 
 jobs:
-  build:
 
+  build-and-test-all:
     runs-on: ubuntu-latest
-
     steps:
     - uses: actions/checkout@v4
     - name: Build
       run: cargo build --verbose
     - name: Run tests
       run: cargo test --verbose
+
+  empty-txt-test:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    - name: Run tests
+      run: cargo test empty --verbose
+
+  fox-txt-test:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    - name: Run tests
+      run: cargo test fox --verbose
+  
+  bustle-txt-test:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    - name: Run tests
+      run: cargo test bustle --verbose
+  
+  spiders-txt-test:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    - name: Run tests
+      run: cargo test spiders --verbose
+
+  skips-bad-file-test:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    - name: Run tests
+      run: cargo test skip --verbose
